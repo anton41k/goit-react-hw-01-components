@@ -1,0 +1,50 @@
+.item {
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow-item);
+
+  background-color: var(--color-white);
+
+  margin: 30px;
+  padding: 10px 30px;
+
+  cursor: pointer;
+
+  transition: box-shadow var(--delay) var(--fun-transition),
+    transform var(--delay) var(--fun-transition);
+}
+
+.item:hover {
+  box-shadow: var(--box-shadow-item-hover);
+  transform: scale(1.1);
+}
+
+.status {
+  border: 1px;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+}
+
+.online {
+  background: var(--color-online);
+  box-shadow: var(--box-shadow-online);
+}
+
+.ofline {
+  background: var(--color-ofline);
+  box-shadow: var(--box-shadow-ofline);
+}
+
+.avatar {
+  margin-left: 20px;
+
+  border-radius: 5px;
+  background-color: var(--color-bgc-avatar);
+}
+
+.name {
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}

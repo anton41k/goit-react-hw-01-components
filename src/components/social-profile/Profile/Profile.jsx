@@ -7,7 +7,7 @@ export const Profile = ({ name, tag, location, avatar, stats }) => {
     <div className={css.profile}>
       <div className={css.description}>
         <img
-          src="https://www.flaticon.com/svg/static/icons/svg/3135/3135715.svg"
+          src={avatar}
           alt="Аватар пользователя"
           className={css.avatar}
           width={imageSize.xl}
@@ -38,10 +38,17 @@ export const Profile = ({ name, tag, location, avatar, stats }) => {
 Profile.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.exact({
-      id: PropTypes.number.isRequired,
+      tag: PropTypes.string.isRequired,
       avatar: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      isOnline: PropTypes.bool.isRequired,
+      location: PropTypes.string.isRequired,
+      stats: PropTypes.arrayOf(
+        PropTypes.exact({
+          followers: PropTypes.number.isRequired,
+          views: PropTypes.number.isRequired,
+          likes: PropTypes.number.isRequired,
+        })
+      ),
     })
   ),
 };

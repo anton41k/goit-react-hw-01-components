@@ -35,6 +35,9 @@
 
 .avatar {
   margin: 10px 0;
+  background-color: var(--color-bgc-avatar);
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .avastatstar {

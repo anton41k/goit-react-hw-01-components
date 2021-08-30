@@ -1,11 +1,14 @@
 import { FriendList } from "components/frend-list/FriendList/FriendList";
 import { Profile } from "components/social-profile/Profile/Profile";
+import { Statistics } from "components/statistics/Statistics/";
+import { TransactionHistory } from "components/transaction-history/TransactionHistory";
 
-import friends from "friend-list/friends.json";
-import user from "social-profile/user.json";
-
+import friends from "./frend-list/friends.json";
+import user from "./social-profile/user.json";
+import statisticalData from "./statistics/statistical-data.json";
+import transactions from "./transaction-history/transactions.json";
+console.log(transactions);
 export const App = () => {
-  console.log(Profile, user);
   return (
     <>
       <FriendList friends={friends} />
@@ -16,6 +19,9 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
+      {/*<Statistics title="Upload stats" stats={statisticalData} />*/}
+      <Statistics title="Upload stats" stats={statisticalData} />
+      <TransactionHistory items={transactions} />
     </>
   );
 };

@@ -3,7 +3,6 @@ import { imageSize } from "constants/imageSize";
 import css from "./FriendListItem.module.css";
 
 export const FriendListItem = ({ id, name, avatar, isOnline }) => {
-  console.log({ id, name, avatar, isOnline });
   return (
     <li className={css.item} key={id}>
       <span

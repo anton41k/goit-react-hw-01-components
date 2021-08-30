@@ -7,7 +7,7 @@ import friends from "./frend-list/friends.json";
 import user from "./social-profile/user.json";
 import statisticalData from "./statistics/statistical-data.json";
 import transactions from "./transaction-history/transactions.json";
-console.log(transactions);
+
 export const App = () => {
   return (
     <>

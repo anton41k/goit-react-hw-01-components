@@ -7,7 +7,7 @@ import {
   Section,
 } from "./Statistics.styled";
 import randomColor from "randomcolor";
-console.log(typeof randomColor());
+
 export const Statistics = ({ title, stats }) => {
   return (
     <Section>
